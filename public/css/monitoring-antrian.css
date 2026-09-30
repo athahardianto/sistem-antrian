@@ -1,0 +1,207 @@
+/* ===== Monitoring Antrian — CSS ===== */
+
+:root {
+    --biru-navbar: #2f7de1;
+    --biru-navbar-tua: #2668bd;
+    --biru-kartu: #2c78dc;
+    --biru-kartu-tua: #1f5fb5;
+    --biru-halaman: #eff3f7;
+    /* --oranye-footer: #e88b1a; */
+    --putih: #ffffff;
+    --teks-tua: #22262e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: "Segoe UI", Tahoma, Arial, sans-serif; */
+    /* font-family: Raleway, sans-serif; */
+    font-family: Poppins, sans-serif;
+    background-color: var(--biru-halaman);
+    color: var(--teks-tua);
+
+    
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: var(--biru-navbar);
+    color: var(--putih);
+}
+
+.navbar-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    /* background-color: var(--putih); */
+    background-color: none;
+    color: var(--biru-navbar);
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.instansi {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.alamat {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.navbar-right {
+    text-align: right;
+    line-height: 1.3;
+}
+
+.tanggal {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.jam {
+    font-size: 22px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ===== Isi utama ===== */
+.konten {
+    flex: 1;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+.grid {
+    flex: 1;
+    display: grid;
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, 1fr);
+    }
+}
+
+/* ===== Kartu nomor antrian ===== */
+.kartu-antrian {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--biru-kartu);
+    color: var(--putih);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    min-height: 280px;
+}
+
+.kartu-antrian-bar {
+    background-color: var(--biru-kartu-tua);
+    padding: 16px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.kartu-antrian-nomor {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.nomor {
+    font-size: clamp(96px, 12vw, 176px);
+    font-weight: 900;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ===== Kartu video YouTube ===== */
+.kartu-video {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--putih);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.kartu-video-bar {
+    background-color: var(--teks-tua);
+    color: var(--putih);
+    padding: 16px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.kartu-video-player {
+    flex: 1;
+    min-height: 240px;
+    background-color: #000;
+    display: flex;
+}
+
+.kartu-video-player iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ===== Footer ===== */
+.footer {
+    /* background-color: var(--oranye-footer); */
+    color: var(--teks-tua);
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
