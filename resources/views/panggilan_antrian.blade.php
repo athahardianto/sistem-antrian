@@ -13,6 +13,7 @@
 <html lang="en" class="h-100">
 
 <head>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -267,7 +268,7 @@
 
       // Mainkan suara nomor antrian
       setTimeout(function() {
-        responsiveVoice.speak("Nomor Antrian, " + data.no_antrian + ", menuju, loket, 1", "Indonesian Male", {
+        responsiveVoice.speak("Nomor Antrian, " + data.no_antrian , "Indonesian Male", {
           rate: 0.9,
           pitch: 1,
           volume: 1
@@ -338,7 +339,7 @@
     setInterval(function() {
       refreshInfoAntrian();
       table.ajax.reload(null, false);
-    }, 2000);
+    }, 3000);
 
   });
 </script>
