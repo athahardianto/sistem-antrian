@@ -3,6 +3,59 @@
    Latar terang, aksen biru + teal, font Sora (display) / Manrope (body).
    ============================================================ */
 
+/* ===== Sora ===== */
+@font-face {
+  font-family: "Sora";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/sora-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Sora";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/sora-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Sora";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/sora-latin-800-normal.woff2") format("woff2");
+}
+
+/* ===== Manrope ===== */
+@font-face {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/manrope-latin-700-normal.woff2") format("woff2");
+}
+
 :root {
   --biru: #2563eb;        /* aksen utama (biru 600) */
   --teal: #14b8a6;        /* aksen kedua (teal 500) */

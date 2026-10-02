@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Raleway";
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/raleway-latin-wght-normal.woff2") format("woff2");
+}
 body {
   font-family: Raleway, sans-serif;
   background-color: #f6f8fd;
