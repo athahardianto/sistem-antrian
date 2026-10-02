@@ -190,6 +190,23 @@
   <script src="{{ asset('js/dataTables.bootstrap5.min.js') }}"></script>
   
   <script type="text/javascript">
+
+  function bicara(teks) {
+    if (!('speechSynthesis' in window)) return;
+    const ucap = () => {
+      const u = new SpeechSynthesisUtterance(teks);
+      u.lang = 'id-ID';
+      u.rate = 0.9;
+      const suara = speechSynthesis.getVoices()
+        .find(v => v.lang.toLowerCase().startsWith('id') && v.localService);
+      if (suara) u.voice = suara;
+      speechSynthesis.cancel();
+      speechSynthesis.speak(u);
+    };
+    // daftar suara kadang dimuat terlambat
+    if (speechSynthesis.getVoices().length) ucap();
+    else speechSynthesis.onvoiceschanged = ucap;
+  }
   $(document).ready(function() {
 
     // Setup CSRF Token untuk seluruh request AJAX Laravel
@@ -275,12 +292,15 @@
       var durasi_bell = bell ? bell.duration * 770 : 1000;
 
       // Mainkan suara nomor antrian
+      // setTimeout(function() {
+      //   responsiveVoice.speak("Nomor Antrian, " + data.no_antrian , "Indonesian Male", {
+      //     rate: 0.9,
+      //     pitch: 1,
+      //     volume: 1
+      //   });
+      // }, durasi_bell);
       setTimeout(function() {
-        responsiveVoice.speak("Nomor Antrian, " + data.no_antrian , "Indonesian Male", {
-          rate: 0.9,
-          pitch: 1,
-          volume: 1
-        });
+        bicara("Nomor Antrian, " + data.no_antrian);
       }, durasi_bell);
 
       // Proses update data antrian ke Laravel
